@@ -55,6 +55,7 @@ skills-gap-intelligence/
 ├── tests/
 │
 └── requirements.txt
+
 Ethical Boundaries
 The project will:
 1.	respect the terms of service of every data source;
