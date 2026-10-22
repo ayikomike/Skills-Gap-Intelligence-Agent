@@ -20,7 +20,7 @@ export PYTHONPATH=src
 python -m skillsgap.pipeline --out out/                          # fresh run, all approved sources
 python -m skillsgap.pipeline --out out/ --sources graduation_lists   # one source
 python -m skillsgap.pipeline --out out/ --offline                # re-run from cache, zero network requests
-python -m pytest -q tests                                        # 10 tests
+python -m pytest -q tests                                        # 15 tests
 ```
 Entry point: `src/skillsgap/pipeline.py`. Config: `config/sources.yaml`.
 Outputs in `out/`: `dataset.csv`, `dataset.json`, `quality_report.json`, `compliance_run_log.csv`,
