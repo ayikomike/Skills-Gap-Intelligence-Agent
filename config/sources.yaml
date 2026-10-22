@@ -1,0 +1,58 @@
+# Source registry. A source runs ONLY if enabled=true AND approval is recorded.
+# Approval statuses mirror the Week 2 data-source map / compliance log.
+project:
+  user_agent_name: "MuniUni-SkillsGapCapstone/0.1"
+  project_url: "https://github.com/ayikomike/Skills-Gap-Intelligence-Agent"
+  contact_env: "SKILLSGAP_CONTACT_EMAIL"
+http:
+  min_delay_seconds: 3.0       # >= 1 request per 3 s per host
+  timeout_seconds: 30
+  max_retries: 3
+  backoff_base_seconds: 2.0    # waits 2, 4, 8 s (+ jitter)
+  respect_robots: true
+  cache_dir: "cache"
+  cache_ttl_hours: 24
+limits:
+  max_pages_per_source: 3      # Week 3 test sample only
+  max_records_per_source: 100
+sources:
+  brightermonday:
+    kind: demand
+    enabled: true
+    approval: "supervisor-approved (Week 3 brief); no written permission from site owner yet"
+    tos_note: "Terms: personal/non-commercial use; research use approved by supervisor. Do not redistribute raw listing text."
+    listing_url: "https://www.brightermonday.co.ug/jobs"
+    fetch_descriptions: false  # set true only after supervisor confirms description capture
+  district_adverts:
+    kind: demand
+    enabled: true
+    approval: "approved: public-sector notices (Week 2, source 3)"
+    urls:
+      - "https://lyantonde.go.ug/node/61"
+  graduation_lists:
+    kind: supply
+    enabled: true
+    approval: "approved: published university graduation lists (supervisor advice, Week 3)"
+    lists:
+      - name: "UMI 22nd graduation 2025"
+        institution: "Uganda Management Institute"
+        url: "https://umi.ac.ug/wp-content/uploads/2025/03/Grad-List-2025.pdf"
+        ceremony: "22nd ceremonies, AY 2023/24 (Mar-Apr 2025)"
+        enabled: false   # unnumbered list of names: parser unsupported; use manual seed counts
+      - name: "IUIU 34th graduation (Kampala campus)"
+        institution: "Islamic University in Uganda"
+        url: "https://www.iuiu.ac.ug/assets/images/home/grad_list/kc.pdf"
+        ceremony: "34th ceremony, 20 Dec 2025"
+      - name: "IUIU graduation list mc.pdf"
+        institution: "Islamic University in Uganda"
+        url: "https://www.iuiu.ac.ug/assets/images/home/grad_list/mc.pdf"
+        ceremony: "campus and ceremony to be confirmed from the PDF header"
+      - name: "IUIU graduation list fc.pdf"
+        institution: "Islamic University in Uganda"
+        url: "https://www.iuiu.ac.ug/assets/images/home/grad_list/fc.pdf"
+        ceremony: "campus and ceremony to be confirmed from the PDF header"
+      - name: "Kabale University 11th graduation"
+        institution: "Kabale University"
+        url: "https://www.kab.ac.ug/?p=27145"
+        ceremony: "11th ceremony, 30 Oct 2026"
+        enabled: false   # 31 MB PDF; enable after first run on smaller lists
