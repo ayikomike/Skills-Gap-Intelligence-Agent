@@ -1,0 +1,50 @@
+# Week 5 Extraction Pipeline v1 configuration
+# Team: Ayiko Mike (Data/Infra), Aseki Ali (NLP/ML), Andema Agusto (Product/Policy)
+
+method_version: "v1.0-gazetteer-spacy"
+
+data:
+  week3_dataset: "data/sample/TeamName_Week3_Dataset.csv"
+  week3_pipeline_version: "0.1.0"
+  week4_taxonomy: "data/raw/taxonomy/WEEK 4 SKILLS AND OCCUPATION TAXONOMY.xlsx"
+  week4_sheet: "WEEK 4 SKILLS AND OCCUPATION TA"
+  week4_version: "0.1"
+
+columns:
+  postings:
+    id: record_id
+    type: record_type
+    source: source
+    title: title
+    function: function_raw
+    description: description_raw
+    programme: programme
+    award_level: award_level
+  taxonomy:
+    id: concept_id
+    type: concept_type
+    label: preferred_label
+    aliases: aliases
+    parent: parent_id
+    version: version
+
+routing:
+  demand_title_to_occupation: true
+  demand_function_to_occupation: true
+  demand_description_to_skill: true
+  supply_programme_to_skill: true
+
+heldout:
+  fraction: 0.20
+  method: "md5(record_id) mod 5 == 0"
+  output: "data/processed/week8_validation_sample.csv"
+  checksum_log: "docs/week5_heldout.md"
+
+labelled_sample:
+  target_cases: 60
+  stratify_by: [source, record_type]
+  output: "TeamName_Week5_LabeledSample.csv"
+
+spacy:
+  model: "en_core_web_sm"
+  model_version: "3.8.0"
