@@ -1,0 +1,8 @@
+variant,stem_graduates,humanities_graduates,health_graduates_excluded,stem_per_5_humanities,ndpiv_current_per_5,ndpiv_target_per_5,comparable_to_ndpiv,note
+"Primary: supply, health excluded",71.0,3331.0,183.0,0.10657460222155508,2.0,3.0,NO - two-institution convenience sample,Week 3 field_group_provisional; NON_STEM used as humanities (MAP-004 caveat)
+Health counted as STEM,254.0,3331.0,0.0,0.38126688682077453,2.0,3.0,NO - two-institution convenience sample,Sensitivity for MAP-006
+Health counted as humanities,71.0,3514.0,0.0,0.1010244735344337,2.0,3.0,NO - two-institution convenience sample,Sensitivity for MAP-006
+Exact counts only (drops approx/combined),0.0,2618.0,0.0,0.0,2.0,3.0,NO - two-institution convenience sample,"Removes every IUIU row, which are all approximate"
+Institution: Islamic University in Uganda,6.0,580.0,126.0,0.05172413793103448,2.0,3.0,NO - two-institution convenience sample,Single institution
+Institution: Uganda Management Institute,65.0,2751.0,57.0,0.11813885859687387,2.0,3.0,NO - two-institution convenience sample,Single institution
+Demand analogue: postings in STEM vs non-STEM categories,2.0,10.5,0.5,0.9523809523809523,2.0,3.0,"NO - counts postings, not graduates",Units are postings; shown only to contrast demand mix with supply mix

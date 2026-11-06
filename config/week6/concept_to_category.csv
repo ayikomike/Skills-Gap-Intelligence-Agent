@@ -1,0 +1,21 @@
+concept_id,category_id,note
+OCC-12,DOM-06,Administrative and commercial managers
+OCC-24,DOM-06,Business and administration professionals
+OCC-33,DOM-06,Business and administration associate professionals (cross-domain; procurement roles sit in DOM-10)
+OCC-31,DOM-03,Science and engineering associate professionals
+OCC-25,DOM-02,ICT professionals
+OCC-35,DOM-02,ICT technicians
+OCC-ICT-01,DOM-02,
+OCC-ICT-02,DOM-02,
+OCC-ICT-03,DOM-02,
+OCC-22,DOM-04,
+OCC-32,DOM-04,
+OCC-23,DOM-05,
+OCC-LOG-01,DOM-10,
+OCC-ENV-01,DOM-08,
+SKL-020,DOM-02,Cybersecurity fundamentals
+SKL-030,DOM-06,Monitoring and evaluation (taxonomy parent DOM-06)
+SKL-031,DOM-06,Project management (taxonomy parent DOM-06)
+SKL-045,DOM-06,Human resource management (taxonomy parent DOM-06)
+SKL-053,DOM-07,Public administration: taxonomy parent says DOM-06 but DOM-07 lists it as an alias (taxonomy conflict)
+SKL-097,DOM-06,Entrepreneurship

@@ -1,0 +1,3 @@
+side,records_in_file,excluded_missing,excluded_duplicate,out_of_scope,in_scope_records,unmapped_in_scope,analysed_records,analysed_units,in_scope_units,uncertain_records,split_records
+demand,15,0,0,2,13,0,13,13.0,13.0,5,1
+supply,44,0,0,0,44,0,44,3585.0,3585.0,10,2

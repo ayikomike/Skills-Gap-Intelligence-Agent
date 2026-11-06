@@ -1,0 +1,22 @@
+rule_id,side,pattern,category_id,priority,certainty,rationale
+D01,demand,\bprocurement\b|\bsupply chain\b,DOM-10,2,certain,DOM-10 aliases cover supply chain; procurement is a supply-chain function
+D02,demand,\bstock\b|\binventory\b|\bwarehouse\b|\blogistic,DOM-10,2,certain,DOM-10 aliases: logistics; warehousing
+D03,demand,pharmaceutical|medical,DOM-04,2,uncertain,Medical sales: split between health and sales because the role sells health products
+D04,demand,\bsales\b|telesales|\bmarketing\b|business development,DOM-06,2,certain,DOM-06 aliases: commerce
+D05,demand,accountant|\bfinance\b|\baudit,DOM-06,2,certain,DOM-06 aliases: finance
+D06,demand,\bMIS\b|software|developer|\bdata\b|\bICT\b,DOM-02,2,certain,DOM-02: information systems role
+D07,demand,technician|\bAC\b|electrical|mechanic,DOM-09,2,uncertain,Air-conditioning technician: building services trade; DOM-03 also plausible
+D08,demand,\beducation\b|teacher|lecturer,DOM-05,2,certain,DOM-05 aliases: education
+D09,demand,\bpolicy\b|advocacy|law enforcement|governance,DOM-07,2,uncertain,District by-law enforcement and policy roles mapped to public governance
+D10,demand,operations manager|administration|\badmin\b,DOM-06,1,uncertain,Generic management/administration roles; low-specificity fallback
+S01,supply,information technology|information systems|business computing|information security|computer,DOM-02,3,certain,DOM-02: ICT programmes
+S02,supply,medicine|surgery|public health|health services,DOM-04,3,certain,DOM-04: health programmes
+S03,supply,social work,DOM-11,3,certain,DOM-11 aliases: social work
+S04,supply,public administration|civil service|governance,DOM-07,2,certain,DOM-07 aliases: public administration; governance
+S05,supply,\blaws?\b|sharia|shariah,DOM-07,2,uncertain,Law has no own domain in taxonomy v0.1; nearest is governance
+S06,supply,education,DOM-05,2,certain,DOM-05 aliases: education
+S07,supply,journalism|mass communication,DOM-12,2,uncertain,Media mapped to creative industries; no media domain in v0.1
+S08,supply,procurement|logistics|transport|supply chain,DOM-10,2,certain,DOM-10 aliases: logistics; transport
+S09,supply,business|financ|human resource|\bHR\b|marketing|secretarial|monitoring and evaluation|project planning|management studies|institutional management|organisational development|administrative,DOM-06,1,certain,DOM-06: business and administration programmes; M&E and project skills sit under DOM-06 in the taxonomy
+S10,supply,management and administration|leadership,DOM-06,1,uncertain,Generic management programmes
+S11,supply,\bNGO\b|community development,DOM-11,2,uncertain,NGO and community programmes mapped to social services and community development
