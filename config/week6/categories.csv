@@ -1,0 +1,16 @@
+category_id,stem_group,ict_9274,note
+DOM-01,STEM,N,Agricultural science treated as STEM; confirm against NDPIV operational definition
+DOM-02,STEM,Y,ICT core domain; used for the NDPIV ICT-demand statement (para 383; "9274" in the brief)
+DOM-03,STEM,N,
+DOM-04,REVIEW_HEALTH,N,Health kept separate per Week 4 MAP-006 until supervisor decides
+DOM-05,NON_STEM,N,
+DOM-06,NON_STEM,N,
+DOM-07,NON_STEM,N,Includes law in v0.1 because the taxonomy has no legal domain
+DOM-08,STEM,N,
+DOM-09,STEM,N,
+DOM-10,NON_STEM,N,
+DOM-11,NON_STEM,N,
+DOM-12,NON_STEM,N,
+DOM-13,NON_STEM,N,No posting evidences the informal sector (Week 5 limits)
+DOM-14,NOT_A_FIELD,N,Cross-cutting skills are not an education field
+DOM-15,STEM,Y,Digital and data skills across sectors; used for the NDPIV ICT-demand statement (para 383; "9274" in the brief)

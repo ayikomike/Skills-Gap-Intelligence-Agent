@@ -1,0 +1,36 @@
+{
+  "run_at": "2026-11-06T01:49:53+00:00",
+  "engine_version": "w6-gap-0.1.0",
+  "records_file": "data/processed/week5_working_sample.csv",
+  "records_sha256": "2eacce913588b697ad74082b9ce09cd17738907052c16e2067b8a2718dbeeccf",
+  "records_version": "Week 3 pipeline_version 0.1.0, working split (week5_heldout.md)",
+  "records_pipeline_version": "0.1.0",
+  "taxonomy_source": "WEEK 4 - SKILLS AND OCCUPATION TAXONOMY.zip::WEEK 4 SKILLS AND OCCUPATION TAXONOMY.xlsx",
+  "taxonomy_sha256": "019d86d5d85e813f404411691ac27c300c0426320a8110c124e89a35140bc02c",
+  "taxonomy_version": "0.1",
+  "taxonomy_review_status": "provisional",
+  "extraction_file": "data/processed/week5_extractions_v1.csv",
+  "extraction_sha256": "7d43dff685aa68fcf377ab4b70c8c62f70d63e4a19450fb7ad2f951df382c47f",
+  "extraction_method_version": "v1.0-gazetteer-spacy",
+  "mapping_rules_sha256": "41d2fc88362d25e97fc91bd1063857cdaf1afaaff1df78bd97519c3d7ad3ec2a",
+  "categories_sha256": "60f9620fb1481768c74f05c176a076cbb26196b041dc0ee6454d8e872cddfad4",
+  "concept_to_category_sha256": "e38702b33f0c091249f0099443ffa7e1b112d7a11f9b22d2ed221d8619d4d329",
+  "config_sha256": "4115d1eb9448737172b30b9b866436b6b85bd0c7f42b1d12cb879f1ca69bde86",
+  "week5_agreement": {
+    "records_with_week5_evidence": 17,
+    "agree": 14,
+    "disagree_record_ids": [
+      "UMI 22nd graduation 2025:9f68ac53ee2f7eac",
+      "brightermonday:1b6bd9658205bc01",
+      "brightermonday:56a4295b9c22eb8e"
+    ]
+  },
+  "outputs": {
+    "category_results.csv": "f908790fd26e98de777f3b2abc9b26c8a93a3e9455caa7e9637aed85cfdae28b",
+    "coverage.csv": "4b4b1bdc6f1ff6c271343f09390bc91f4378b442dcf073a10cb5af09b95c2bd9",
+    "joined_records.csv": "b4bcce3e0d45999e3e0c1b3009c08354d118a7875eba98cd8a58d2477c0a3024",
+    "sensitivity.csv": "f7bd6e5c81c4440a62a20fd6175cdbdeadc906f30e56e64e11f8a9c2a3f7942b",
+    "stem_ratio.csv": "ff5ac869a505cc77e8b09df0b2bc91b2824c82e4beb8fde7c75554e8eca7ed6e",
+    "unmatched_uncertain_excluded.csv": "3d7faf22dcf74d4419f00424b9efabce7a524d83066ca58a527e164791237a13"
+  }
+}

@@ -1,0 +1,40 @@
+# Week 6 gap-analysis engine configuration.
+# Every number the engine uses is set here, so a reviewer can see and change it.
+engine_version: "w6-gap-0.1.0"
+
+inputs:
+  # Week 3 records minus the Week 8 held-out split (do NOT point this at the held-out file).
+  records: "data/processed/week5_working_sample.csv"
+  records_version: "Week 3 pipeline_version 0.1.0, working split (week5_heldout.md)"
+  heldout_guard: "data/processed/week8_validation_sample.csv"   # engine refuses to read this
+  week5_extractions: "data/processed/week5_extractions_v1.csv"
+  week5_labels: "Week5_LabeledSample.csv"
+  taxonomy_xlsx: "data/raw/taxonomy/WEEK 4 SKILLS AND OCCUPATION TAXONOMY.xlsx"
+  taxonomy_zip: "WEEK 4 - SKILLS AND OCCUPATION TAXONOMY.zip"   # fallback if the xlsx is not unpacked
+  taxonomy_member: "WEEK 4 SKILLS AND OCCUPATION TAXONOMY.xlsx"
+  categories: "config/week6/categories.csv"
+  mapping_rules: "config/week6/mapping_rules.csv"
+  concept_to_category: "config/week6/concept_to_category.csv"
+
+scope:
+  # Population = jobs located in Uganda. Postings whose location is in this list are out of scope.
+  exclude_locations: ["Outside Uganda"]
+  # Employers treated as intermediaries (possible re-posts of another employer's vacancy).
+  intermediary_employers: ["BrighterMonday Consulting", "Anonymous Employer"]
+
+support:
+  # A category result is labelled LOW SUPPORT below these counts.
+  min_demand_units: 3
+  min_supply_graduates: 30
+
+bootstrap:
+  reps: 2000
+  seed: 20261106
+  interval: 0.90
+
+# NDPIV para 441(iv), printed p. 200: S&T graduates to humanities graduates (the brief cites it as 441(ii)).
+ndpiv_441ii:
+  current_stem_to_humanities: [2, 5]
+  target_stem_to_humanities: [3, 5]
+
+output_dir: "data/processed/week6"
